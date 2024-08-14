@@ -1,0 +1,36 @@
+volumes:
+  blog-db:
+
+networks:
+  blog:
+
+services:
+  blog-db:
+    container_name: "blog-db"
+    image: mysql:latest
+    volumes:
+      - blog-db:/var/lib/mysql
+    ports:
+      - "33064:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=blog
+      - MYSQL_DATABASE=blog_db
+      - MYSQL_USER=blog
+      - MYSQL_PASSWORD=blog
+      - MYSQL_ALLOW_EMPTY_PASSWORD=false
+    networks:
+      - blog
+
+  blog:
+    container_name: "blog"
+    build:
+      context: .
+    working_dir: /var/www
+    volumes:
+      - "./:/var/www"
+    ports:
+      - "8080:80"
+    networks:
+      - blog
+    depends_on:
+      - blog-db
