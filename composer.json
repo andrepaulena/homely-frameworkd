@@ -3,6 +3,7 @@
     "description": "Blog project",
     "type": "project",
     "require": {
+        "php": "8.3",
         "ext-json": "*",
         "ext-http": "*",
         "ext-pdo": "*",

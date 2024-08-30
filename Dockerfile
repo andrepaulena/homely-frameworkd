@@ -2,12 +2,13 @@ FROM alpine:3.20
 
 ENV TZ=UTC \
 	WORKDIR=/var/www/ \
-	USER=aiq \
-	GROUP=aiq \
-	SUPERV=/etc/supervisor.d/ \
-	COMPOSER=/usr/bin/composer
+	USER=blog \
+	GROUP=blog \
+	SUPERV=/etc/supervisor.d/
 
 WORKDIR ${WORKDIR}
+
+COPY --chown=${USER}:${GROUP} ./ ${WORKDIR}
 
 COPY .build/app.conf /etc/nginx/conf.d/default.conf
 COPY .build/www.conf /etc/php83/php-fpm.d/www.conf
@@ -44,8 +45,6 @@ RUN apk update && apk upgrade --no-cache --no-progress && apk add \
 	\
 	cp /usr/share/zoneinfo/${TZ} /etc/localtime && \
 	\
-	curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer && \
-	\
 	mkdir -p /run/nginx ${SUPERV} && \
 	\
 	setcap 'cap_net_bind_service=+ep' /usr/sbin/nginx && \
@@ -59,7 +58,10 @@ RUN apk update && apk upgrade --no-cache --no-progress && apk add \
 
 COPY .build/php-ini-overrides.ini /etc/php83/conf.d/99-overrides.ini
 COPY .build/security.ini /etc/php83/conf.d/42-security-dont-remove.ini
+#COPY .build/opcache.ini /etc/php83/conf.d/90-opcache.ini
 
 EXPOSE 80
+
+USER ${USER}
 
 CMD ["supervisord", "-c", "/etc/supervisord.conf", "-s"]

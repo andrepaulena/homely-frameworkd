@@ -15,13 +15,13 @@ class ArticleService implements ArticleServiceInterface
     }
 
     //TODO: return object with total of records and pages
-    public function getPaginated(int $perPage = 3, int $page = 1)
+    public function getPaginated(): array
     {
         return $this->articleRepository
             ->query('select a.*, au.name as author from articles as a 
                             join authors as au on a.author_id = au.id 
-                            order by a.created_at desc')
-            ->paginate($perPage, $page)
+                            order by a.id desc')
+            ->paginate()
             ->get();
     }
 }

@@ -6,7 +6,9 @@ use App\Services\ArticleService;
 use App\Services\Contracts\ArticleServiceInterface;
 use Src\Container;
 use Src\Http\Contracts\RequestInterface;
+use Src\Http\Contracts\ResponseInterface;
 use Src\Http\Request;
+use Src\Http\Response;
 use Src\Route;
 use Src\TemplateEngine\Contracts\TemplateEngineInterface;
 use Src\TemplateEngine\TwigTemplateEngine;
@@ -24,6 +26,7 @@ class App
         Container::getInstance()->bind(RequestInterface::class, Request::class);
         Container::getInstance()->bind(ArticleServiceInterface::class, ArticleService::class);
         Container::getInstance()->bind(TemplateEngineInterface::class, TwigTemplateEngine::class);
+        Container::getInstance()->bind(ResponseInterface::class, Response::class);
     }
 
     public function run()

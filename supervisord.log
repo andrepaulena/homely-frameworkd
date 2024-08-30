@@ -1,0 +1,36 @@
+2024-08-22 14:55:24,834 WARN No file matches via include "/etc/supervisor.d/*.ini"
+2024-08-22 14:55:24,834 INFO Set uid to user 1000 succeeded
+2024-08-22 14:55:24,837 INFO supervisord started with pid 1
+2024-08-22 14:55:25,839 INFO spawnerr: unknown error making dispatchers for 'nginx': EACCES
+2024-08-22 14:55:25,839 INFO spawnerr: unknown error making dispatchers for 'php-fpm': EACCES
+2024-08-22 14:55:26,840 INFO spawnerr: unknown error making dispatchers for 'nginx': EACCES
+2024-08-22 14:55:26,840 INFO gave up: nginx entered FATAL state, too many start retries too quickly
+2024-08-22 14:55:26,840 INFO spawnerr: unknown error making dispatchers for 'php-fpm': EACCES
+2024-08-22 14:55:28,842 INFO spawnerr: unknown error making dispatchers for 'php-fpm': EACCES
+2024-08-22 14:55:31,845 INFO spawnerr: unknown error making dispatchers for 'php-fpm': EACCES
+2024-08-22 14:55:31,845 INFO gave up: php-fpm entered FATAL state, too many start retries too quickly
+2024-08-22 14:55:43,857 WARN received SIGTERM indicating exit request
+2024-08-22 14:56:07,408 WARN No file matches via include "/etc/supervisor.d/*.ini"
+2024-08-22 14:56:07,408 INFO Set uid to user 1000 succeeded
+2024-08-22 14:56:07,410 INFO supervisord started with pid 1
+2024-08-22 14:56:08,411 INFO spawnerr: unknown error making dispatchers for 'nginx': EACCES
+2024-08-22 14:56:08,411 INFO spawnerr: unknown error making dispatchers for 'php-fpm': EACCES
+2024-08-22 14:56:09,412 INFO spawnerr: unknown error making dispatchers for 'nginx': EACCES
+2024-08-22 14:56:09,413 INFO gave up: nginx entered FATAL state, too many start retries too quickly
+2024-08-22 14:56:09,413 INFO spawnerr: unknown error making dispatchers for 'php-fpm': EACCES
+2024-08-22 14:56:11,414 INFO spawnerr: unknown error making dispatchers for 'php-fpm': EACCES
+2024-08-22 14:56:14,418 INFO spawnerr: unknown error making dispatchers for 'php-fpm': EACCES
+2024-08-22 14:56:14,418 INFO gave up: php-fpm entered FATAL state, too many start retries too quickly
+2024-08-22 14:57:26,490 WARN received SIGTERM indicating exit request
+2024-08-22 14:57:51,844 WARN No file matches via include "/etc/supervisor.d/*.ini"
+2024-08-22 14:57:51,844 INFO Set uid to user 1000 succeeded
+2024-08-22 14:57:51,847 INFO supervisord started with pid 1
+2024-08-22 14:57:52,847 INFO spawnerr: unknown error making dispatchers for 'nginx': EACCES
+2024-08-22 14:57:52,847 INFO spawnerr: unknown error making dispatchers for 'php-fpm': EACCES
+2024-08-22 14:57:53,849 INFO spawnerr: unknown error making dispatchers for 'nginx': EACCES
+2024-08-22 14:57:53,849 INFO gave up: nginx entered FATAL state, too many start retries too quickly
+2024-08-22 14:57:53,849 INFO spawnerr: unknown error making dispatchers for 'php-fpm': EACCES
+2024-08-22 14:57:55,851 INFO spawnerr: unknown error making dispatchers for 'php-fpm': EACCES
+2024-08-22 14:57:58,854 INFO spawnerr: unknown error making dispatchers for 'php-fpm': EACCES
+2024-08-22 14:57:58,854 INFO gave up: php-fpm entered FATAL state, too many start retries too quickly
+2024-08-22 14:58:34,891 WARN received SIGTERM indicating exit request

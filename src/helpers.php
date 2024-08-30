@@ -33,6 +33,6 @@ if (!function_exists('request')) {
 if (!function_exists('render')) {
     function render(string $file, $data = []): string
     {
-        return app()->get(TemplateEngineInterface::class)->render($file, $data);
+
     }
 }

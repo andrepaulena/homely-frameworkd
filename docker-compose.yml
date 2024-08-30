@@ -27,7 +27,7 @@ services:
       context: .
     working_dir: /var/www
     volumes:
-      - "./:/var/www"
+      - ./:/var/www
     ports:
       - "8080:80"
     networks:
